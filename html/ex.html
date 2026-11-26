@@ -1,44 +1,66 @@
- <!DOCTYPE html>
- <lang="en">
-  <head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-  </head>
-      
-   
+    <style>
+        td{
+            padding: 5px 10px;
+        }
+        input[type="text"], input[type="email"], input[type="tel"]{
+            width: 300px;
+        }
+        input[type="submit"], input[type="reset"]{
+            width: 150px;
+            height: 40px;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>레드향 주문하기</h1>
+    <img src="img/귤.png" alt="레드향" width="700">
 
-      
-
-     <h1>레드향 주문하기</h1>
-     <img src="img/귤.png" alt="">
-     
+    <form action="">
         <fieldset>
-            <legend>배송정보</legend>
-         주문 상품<input type="text" name="" id=""> 
-         이름<input type="text" name="" id=""> 
-         배송 주소<input type="text" name="" id=""> 
-         이메일<input type="text" name="" id=""> 
-         연락처<input type="text" name="" id=""> 
-         배송지정<input type="date"  name="date"id="">
-          <input type="tim" name="tim" id=""><br>
-          
-        
-         
+            <legend><b>배송 정보</b></legend>
+            <table>
+                <tr>
+                    <td><label for="product">주문 상품</label></td>
+                    <td><input type="text" name="product" id="product" value="상품용 3KG" readonly></td>
+                </tr>
+                <tr>
+                    <td><label for="name">이름</label></td>
+                    <td><input type="text" name="name" id="name" required></td>
+                </tr>
+                <tr>
+                    <td><label for="addr">배송 주소</label></td>
+                    <td><input type="text" name="addr" id="addr" required></td>
+                </tr>
+                <tr>
+                    <td><label for="mail">이메일</label></td>
+                    <td><input type="email" name="mail" id="mail"></td>
+                </tr>
+                <tr>
+                    <td><label for="tel">연락처</label></td>
+                    <td><input type="tel" name="tel" id="tel" placeholder="하이픈 빼고 입력해 주세요.(01012345678)" required></td>
+                </tr>
+                <tr>
+                    <td><label for="date">배송 지정</label></td>
+                    <td><input type="date" name="date" id="date"> (주문일로부터 최소 3일 이후)</td>
+                </tr>
+            </table>
+        </fieldset>
 
-       
-     <input type="submit" value="주문하기">
-     <input type="submit" value="취소하기">
-
-
-
-    
-   
-
-    
-
-
-
-    
+        <table width="700">
+            <tr>
+                <td align="center">
+                    <input type="submit" value="주문하기">
+                    <input type="reset" value="취소하기">
+                </td>
+            </tr>
+        </table>
+    </form>
 </body>
 </html>
